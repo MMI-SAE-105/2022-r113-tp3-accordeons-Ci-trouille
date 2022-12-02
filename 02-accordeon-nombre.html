@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
@@ -12,17 +13,17 @@
       <section>
         <button @click="open = 1">bouton 1</button>
 
-        <p x-show="open == 1" x-transition >Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel animi nihil quasi consequuntur dolore quas ullam distinctio hic numquam, officiis culpa provident veniam accusamus ratione minus tempora non, modi esse?</p>
+        <p x-show="open == 1" x-transition:enter.origin.top x-transition:leave.origin.top>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel animi nihil quasi consequuntur dolore quas ullam distinctio hic numquam, officiis culpa provident veniam accusamus ratione minus tempora non, modi esse?</p>
       </section>
       <section>
         <button @click="open = 2">bouton 2</button>
 
-        <p x-show="open == 2" x-transition >Aliquid tempore excepturi sit. Vero, tempore unde amet ea ipsum illo omnis mollitia maiores quis, quae quas aliquam minus expedita dolorum. Voluptas unde nam, aperiam quas eveniet nihil alias at.</p>
+        <p x-show="open == 2" x-transition:enter.scale.80 x-transition:leave.scale.80>Aliquid tempore excepturi sit. Vero, tempore unde amet ea ipsum illo omnis mollitia maiores quis, quae quas aliquam minus expedita dolorum. Voluptas unde nam, aperiam quas eveniet nihil alias at.</p>
       </section>
       <section>
         <button @click="open = 3">bouton 3</button>
 
-        <p x-show="open == 3" x-transition >Dolorum aut, velit repellendus natus dolores quis nihil fugit error voluptatibus nam. At minus libero nihil consectetur iusto modi officia consequatur, cupiditate, perspiciatis sequi tempora amet reiciendis error, earum quae?</p>
+        <p x-show="open == 3" x-transition:enter.scale.30 x-transition:leave.scale.30>Dolorum aut, velit repellendus natus dolores quis nihil fugit error voluptatibus nam. At minus libero nihil consectetur iusto modi officia consequatur, cupiditate, perspiciatis sequi tempora amet reiciendis error, earum quae?</p>
       </section>
     </div>
   </body>
